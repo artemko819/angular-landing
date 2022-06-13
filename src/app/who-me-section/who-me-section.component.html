@@ -1,0 +1,24 @@
+<section class="who-me" id="who-me">
+  <div class="container">
+    <div class="row">
+      <div class="text-block">
+        <h3>Why We</h3>
+        <p>
+          A team dedicated to protect your assets and reputation. <br> With our
+          global footprint and our specialized team members and partners we know
+          what it takes to make sure that we can deliver a minimum risk
+          environment for our clients.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+        <div class="block-info" *ngFor="let info of infos">
+            <h3>
+              {{info.count}}
+            </h3>
+            <strong>{{info.header}}</strong>
+            <p>{{info.text}}</p>
+        </div>
+    </div>
+  </div>
+</section>

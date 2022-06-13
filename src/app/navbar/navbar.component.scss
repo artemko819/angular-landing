@@ -1,0 +1,118 @@
+.container {
+  padding-top: 50px;
+}
+.logo {
+  @media (max-width: 1180px) {
+    // padding-left: 20px;
+  }
+}
+
+nav {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: flex-end;
+  .mobile-icon {
+    padding-top: 10px;
+  }
+  @media (max-width: 420px) {
+    // padding-right: 20px;
+  }
+  ul {
+    display: flex;
+    gap: 43px;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+      display: none;
+    }
+    &.mobile {
+      display: none;
+      h3 {
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        margin-top: 40px;
+        margin-bottom: -5px;
+        color: #000000;
+        opacity: 0.5;
+      }
+      .logo {
+        display: flex;
+        justify-content: space-between;
+        img {
+          width: 160px;
+          &.close {
+            width: 23px;
+            height: 23px;
+            position: relative;
+            top: 5px;
+          }
+        }
+      }
+      @media (max-width: 768px) {
+        display: block;
+        left: -999px;
+        position: fixed;
+        top: 0;
+        background: #ffbc00;
+        z-index: 9999;
+        width: 100%;
+        padding: 40px 24px 40px 24px;
+        transition: all 0.3s ease-in-out;
+        &.show{
+            left: 0;
+        }
+        li {
+            max-width: 200px;
+            line-height: 22px;
+            padding-top: 20px;
+          &.active {
+            background: none;
+            border-radius: 0px;
+            a {
+              padding: 0;
+              &:hover {
+                background: none;
+                border-radius: 0px;
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    li {
+      line-height: 40px;
+      &.active {
+        background: #fff;
+        border-radius: 12px;
+        a {
+          padding: 0px 20px 0 20px;
+        }
+      }
+      a {
+        color: #111;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background: #fff;
+          border-radius: 12px;
+          padding: 0px 20px 0 20px;
+        }
+      }
+    }
+  }
+}
+
+.mobile-icon {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+}

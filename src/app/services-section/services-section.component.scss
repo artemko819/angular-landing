@@ -1,0 +1,54 @@
+.services {
+  padding: 160px 0 160px 0;
+  .row {
+    flex-wrap: wrap;
+    .text-block {
+      position: relative;
+      top: 30px;
+      width: 340px; 
+      padding-left: 30px;
+      padding-top: 15px;
+      .square {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        left: 0;
+        top: 0;
+        background: #f3f3f3;
+        z-index: -1;
+        border-radius: 12px;
+      }
+      h3 {
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 160%;
+        max-width: 240px;
+        color: #111;
+      }
+      p {
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 180%;
+        color: #999999;
+        padding-top: 10px;
+        padding-bottom: 55px;
+      }
+      a {
+        color: #ffbc00;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: #111;
+        }
+        span {
+          position: relative;
+          left: 10px;
+        }
+      }
+    }
+  }
+}

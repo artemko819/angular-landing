@@ -1,0 +1,29 @@
+.btn {
+    width: 176px;
+    height: 65px;
+    border: 0;
+    font-size: 18px;
+    background: #ffffff;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    margin-top: 70px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: rotateZ(-5deg);
+      box-shadow: 0 0 10px #000;
+      cursor: pointer;
+    }
+    @media (max-width: 420px) {
+      margin-top: 30px;
+    }
+  }
+.window{
+    background: #111;
+    position: relative;
+    width: 200px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    top:50px
+}

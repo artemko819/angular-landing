@@ -1,0 +1,45 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="logo">
+        <a href="/"
+          ><img src="../../assets/images/logo-white 1.png" alt="logo"
+        /></a>
+      </div>
+      <nav>
+        <div class="mobile-icon" (click)="toggle()">
+          <img src="../../assets/images/menu-icon.png" alt="iconmenu" />
+        </div>
+        <ul>
+          <li
+            *ngFor="let link of links; let i = index"
+            (click)="setActive(i)"
+            [class.active]="link.id === activeLink"
+          >
+            <a [href]="link.path">{{ link.text }}</a>
+          </li>
+        </ul>
+        <ul class="mobile" [class.show]="showMenu">
+          <div class="logo">
+            <a href="/"
+              ><img src="../../assets/images/logo-white 1.png" alt="logo"
+            /></a>
+            <img
+            (click)="toggle()"
+              class="close"
+              src="../../assets/images/close.png"
+              alt="close"
+            />
+          </div>
+          <li *ngFor="let link of mobileLinks; let i = index">
+            <a [href]="link.path">{{ link.text }}</a>
+          </li>
+          <h3>Services</h3>
+          <li *ngFor="let link of mobileLinksServices; let i = index">
+            <a href="#">{{ link.text }}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

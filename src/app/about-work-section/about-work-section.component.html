@@ -1,0 +1,56 @@
+<section class="about-work" id="work">
+  <div class="container">
+    <div class="row">
+      <h2><span> What We</span> Do</h2>
+    </div>
+
+    <div class="row" [class.reverce]="active === 1">
+      <div class="wrap-block" *ngFor="let image of images; let i = index">
+        <div class="number-block">
+          <h3>
+            <span>{{ works[i].id }}</span
+            >{{ works[i].text }}
+          </h3>
+        </div>
+        <div class="image-block">
+          <img [src]="image.imageSrc" alt="" />
+          <a href="#"
+            >Read more
+            <span
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg> </span
+          ></a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap-btn">
+      <button
+        class="btn"
+        [class.active]="active === 0"
+        (click)="handleClick(0)"
+      >
+        Our services
+      </button>
+      <button
+        class="btn"
+        [class.active]="active === 1"
+        (click)="handleClick(1)"
+      >
+        Contact Us
+      </button>
+    </div>
+  </div>
+</section>

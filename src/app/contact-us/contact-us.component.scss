@@ -1,0 +1,93 @@
+.row {
+  .wrap-form {
+    background: #ffffff;
+    width: 100%;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 30px;
+    padding: 60px;
+    position: relative;
+    z-index: 2;
+    form {
+      .form-control {
+        margin-top: 40px;
+        position: relative;
+
+        input,
+        textarea {
+          border: 0;
+          outline: none;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          width: 100%;
+          max-width: 510px;
+          transition: all 0.3s ease-in-out;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 21px;
+          font-family: "Ubuntu";
+          color: #111111;
+          &:focus {
+            border-color: #ffbc00;
+            & ~ label {
+              top: -15px;
+              left: 0px;
+              color: #999;
+              font-size: 12px;
+            }
+          }
+        }
+        label {
+          position: absolute;
+          font-family: "Ubuntu";
+          font-size: 14px;
+          line-height: 14px;
+          color: #111;
+          transition: all 0.3s ease-in-out;
+          top: 0;
+          left: 5px;
+        }
+      }
+    }
+  }
+}
+.row {
+  .wrap-form {
+    form {
+      .form-control {
+        .form-input:not(:placeholder-shown).form-input:not(:focus) ~ label {
+          top: -15px;
+          left: 0px;
+          color: #999;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+.alert{
+    font-size: 12px;
+    color:red;
+    margin-top: 5px;
+}
+
+.btn {
+  width: 170px;
+  height: 61px;
+  background: #ffbc00;
+  border: 0;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  margin-top: 40px;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:disabled{
+    transition: all 0.3s ease-in-out;
+    opacity: 0.5;
+    cursor: no-drop;
+}

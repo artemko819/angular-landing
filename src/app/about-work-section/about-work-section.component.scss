@@ -1,0 +1,121 @@
+
+
+.row {
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  .number-block {
+    width: 270px;
+    h3 {
+      font-family: "Ubuntu";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      display: grid;
+      grid-template-columns: 0.1fr 1fr;
+      align-items: center;
+    }
+    span {
+      display: inline-block;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: #fbfbfb;
+      border-radius: 12px;
+      font-size: 24px;
+      line-height: 60px;
+      color: #ffbc00;
+      margin-right: 10px;
+      padding-left: 23px;
+    }
+  }
+}
+
+.row {
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  gap: 15px;
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #ffbc00;
+    border-radius: 5px;
+  }
+  .image-block {
+    width: 270px;
+    display: grid;
+    background: #d3dffe;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    height: 475px;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 30px;
+    a {
+      font-family: "Ubuntu";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 18px;
+      color: #fff;
+      text-decoration: none;
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      width: 80%;
+      svg {
+        display: block;
+        float: right;
+      }
+    }
+  }
+}
+
+.row {
+  &.reverce {
+    flex-direction: row-reverse;
+  }
+  .wrap-block:nth-child(2) {
+    .image-block {
+      img {
+        position: relative;
+        top: 170px;
+      }
+    }
+  }
+}
+
+.wrap-btn {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  .btn {
+    width: 170px;
+    cursor: pointer;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffbc00;
+    height: 61px;
+    left: 775px;
+    top: 2962px;
+    background: #fff;
+    border: 1px solid #ffbc00;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    transition: all 0.3s ease-in-out;
+    @media (max-width:420px) {
+      width: 150px;
+    }
+    &.active {
+      background: #ffbc00;
+      color: #fff;
+    }
+  }
+}

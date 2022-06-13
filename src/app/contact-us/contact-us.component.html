@@ -1,0 +1,123 @@
+<section class="contact-us" id="contact">
+  <div class="container">
+    <div class="row">
+      <h2><span>Contact</span> us</h2>
+    </div>
+    <div class="row">
+      <div class="wrap-form">
+        <form [formGroup]="form" (ngSubmit)="send()" *ngIf="!sendForm">
+          <div class="form-control">
+            <input
+              type="text"
+              id="name"
+              class="form-input"
+              formControlName="name"
+              placeholder=" "
+            />
+            <label for="name">Full name</label>
+            <div
+              *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+              class="alert alert-danger"
+            >
+              <div *ngIf="name?.errors?.['required']">Name is required.</div>
+              <div *ngIf="name?.errors?.['minlength']">
+                Name must be at least 2 characters long.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-control">
+            <input
+              type="text"
+              id="company"
+              class="form-input"
+              placeholder=" "
+              formControlName="companyName"
+            />
+            <label for="company">Company name</label>
+            <div
+              *ngIf="
+                companyName?.invalid &&
+                (companyName?.dirty || companyName?.touched)
+              "
+              class="alert alert-danger"
+            >
+              <div *ngIf="companyName?.errors?.['required']">
+                Company name is required.
+              </div>
+              <div *ngIf="companyName?.errors?.['minlength']">
+                Company name must be at least 3 characters long.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-control">
+            <input
+              type="tel"
+              id="tel"
+              class="form-input"
+              placeholder=" "
+              formControlName="phone"
+            />
+            <label for="tel">Phone Number</label>
+            <div
+              *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)"
+              class="alert alert-danger"
+            >
+              <div *ngIf="phone?.errors?.['required']">Phone is required.</div>
+              <div *ngIf="phone?.errors?.['minlength']">
+                Min Length must be at least 10 characters long.
+              </div>
+              <div *ngIf="phone?.errors?.['maxlength']">
+                Max Length must be at least 10 characters long.
+              </div>
+              <div *ngIf="phone?.errors?.['pattern']">
+                Number is not correct enter format 0950001122
+              </div>
+            </div>
+          </div>
+
+          <div class="form-control">
+            <input
+              type="email"
+              class="form-input"
+              placeholder=" "
+              formControlName="email"
+              id="email"
+            />
+            <label for="email">Email</label>
+            <div
+              *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+              class="alert alert-danger"
+            >
+              <div *ngIf="email?.errors?.['required']">Email is required.</div>
+              <div *ngIf="email?.errors?.['email']">Email is not correct</div>
+            </div>
+          </div>
+
+          <div class="form-control">
+            <textarea
+              id="area"
+              class="form-input"
+              placeholder=" "
+              formControlName="text"
+              rows="1"
+            ></textarea>
+            <label for="area">Write Us Messages</label>
+            <div
+              *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+              class="alert alert-danger"
+            >
+              <div *ngIf="name?.errors?.['required']">Name is required.</div>
+              <div *ngIf="name?.errors?.['minlength']">
+                Name must be at least 2 characters long.
+              </div>
+            </div>
+          </div>
+          <button class="btn" [disabled]="form.invalid">Send message</button>
+        </form>
+        <h2 *ngIf="sendForm">Thank you, your message has been sent</h2>
+      </div>
+    </div>
+  </div>
+</section>
