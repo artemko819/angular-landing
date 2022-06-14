@@ -25,17 +25,21 @@
               ><img src="../../assets/images/logo-white 1.png" alt="logo"
             /></a>
             <img
-            (click)="toggle()"
+              (click)="toggle()"
               class="close"
               src="../../assets/images/close.png"
               alt="close"
             />
           </div>
-          <li *ngFor="let link of mobileLinks; let i = index">
+          <li
+            *ngFor="let link of mobileLinks; let i = index"
+            (click)="setActive(i)"
+          >
             <a [href]="link.path">{{ link.text }}</a>
           </li>
           <h3>Services</h3>
-          <li *ngFor="let link of mobileLinksServices; let i = index">
+          <li *ngFor="let link of mobileLinksServices; let i = index"
+             (click)="setActive(i)">
             <a href="#">{{ link.text }}</a>
           </li>
         </ul>

@@ -25,6 +25,10 @@ export class NavbarComponent implements OnInit {
   
   setActive(i: number) {
     this.activeLink = i;
+    setTimeout(()=>{
+      this.showMenu = !this.showMenu
+    },500)
+
   }
 
   toggle(){
